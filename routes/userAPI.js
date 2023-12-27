@@ -2,8 +2,9 @@ const express = require("express");
 const router = express.Router();
 const { body, validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
-
+const jwt = require("jsonwebtoken");
 const User = require("../models/User");
+const config = require("../config/keys");
 
 router.get("/", (req, res) => res.send("User router"));
 
@@ -23,7 +24,6 @@ router.post(
       try {
         const { name, email, password } = req.body;
         let user = await User.find({ email: email });
-        console.log(user);
         if (user && user.length > 0) {
           return res
             .status(400)
@@ -38,14 +38,30 @@ router.post(
         const salt = await bcrypt.genSalt(10);
         user.password = await bcrypt.hash(password, salt);
         user.save();
-        return res.send(`User created.`);
+
+        // JWT token
+        const payload = {
+          user: {
+            id: user.id,
+          },
+        };
+        jwt.sign(
+          payload,
+          config.jwtSecret,
+          { expiresIn: 3600 * 24 },
+          (err, token) => {
+            if (err) throw err;
+            return res.status(200).json({ token: token });
+          }
+        );
+        // return res.send(`User created.`);
       } catch (error) {
-        console.log(error);
+        console.log("Error:", error);
         res.status(500).send("Server error");
       }
+    } else {
+      return res.status(400).json({ errors: result.array() });
     }
-
-    res.send({ errors: result.array() });
   }
 );
 
