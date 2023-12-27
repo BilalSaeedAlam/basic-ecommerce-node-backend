@@ -86,3 +86,5 @@ Bcrypt is used for password protection. Passwords should be hashed before storin
 Feel free to provide feedback or contribute to the project by opening issues or pull requests on the [GitHub repository](https://github.com/your-username/your-node-app).
 
 Happy coding!
+
+** JSON Web Token **
