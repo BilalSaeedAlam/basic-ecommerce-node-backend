@@ -1,0 +1,25 @@
+{
+  "name": "ecommerce-node-backend",
+  "version": "1.0.0",
+  "description": "Ecommerce node application with MERN stack and DevOps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "ecommerce",
+    "mern",
+    "stack",
+    "nodejs"
+  ],
+  "author": "Bilal Ahmed",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.1"
+  }
+}
