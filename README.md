@@ -1,6 +1,6 @@
 # Node Ecommerce Basic Application README
 
-## Aurther
+## Developer
 
 **Bilal Ahmed**
 
@@ -13,7 +13,7 @@ This Node.js application integrates models for handling collections and document
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/your-node-app.git
+   git clone https://github.com/BilalSaeedAlam/basic-ecommerce-node-backend.git
    ```
 
 2. **Navigate to the project directory:**
@@ -34,7 +34,7 @@ This Node.js application integrates models for handling collections and document
 
 1. **MongoDB Setup:**
 
-   Make sure you have MongoDB installed and running. Update the MongoDB connection string in the `config.js` file.
+   Make sure you have MongoDB installed and running. Update the MongoDB connection string in the `config/keys.js` file.
 
    ```javascript
    // config.js
