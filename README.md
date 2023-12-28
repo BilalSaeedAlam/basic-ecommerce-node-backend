@@ -88,3 +88,4 @@ Feel free to provide feedback or contribute to the project by opening issues or 
 Happy coding!
 
 ** JSON Web Token **
+** Authorization Middleware **

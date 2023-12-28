@@ -9,6 +9,7 @@ app.use(express.json({ extended: false }));
 // Routers
 app.use("/api/users", require("./routes/userAPI"));
 app.use("/api/products", require("./routes/productAPI"));
+app.use("/api/auth", require("./routes/authAPI"));
 
 // Endpoints
 app.get("/", (req, res) => {
