@@ -90,3 +90,4 @@ Happy coding!
 ** JSON Web Token **
 ** Authorization Middleware **
 ** User Login Authorization **
+** Product Schema and API **
